@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
-/* Custom global styles */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
 body {
-  @apply bg-gray-50 text-gray-900;
-  font-family: 'Inter', sans-serif;
+  @apply font-sans text-gray-800 bg-gray-50 overflow-x-hidden;
+}
+
+a {
+  @apply text-indigo-600 hover:text-indigo-800 transition-colors;
 }

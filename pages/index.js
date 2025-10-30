@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -7,13 +8,30 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section (gradient, centered) */}
-      <main id="home" className="flex flex-col items-center justify-center text-center min-h-screen bg-linear-to-r from-indigo-600 via-indigo-500 to-blue-500 text-white px-4 pt-16">
-        <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
-          Innovative Digital Solutions
-        </h1>
-        <p className="mt-4 text-lg md:text-2xl max-w-2xl">
-          At <span className="font-semibold">WaveMind Solutions</span>, we combine technology, design, and AI to build products that transform businesses.
-        </p>
+      <main id="home"
+  className="flex flex-col items-center justify-center text-center min-h-screen text-white px-4 pt-16 relative overflow-hidden"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 animate-gradient-x opacity-90"></div>
+  <div className="relative z-10"></div>
+
+        <motion.h1
+  className="text-5xl md:text-6xl font-extrabold drop-shadow-lg"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  Innovative Digital Solutions
+</motion.h1>
+
+<motion.p
+  className="mt-4 text-lg md:text-2xl max-w-2xl"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5, duration: 1 }}
+>
+  At <span className="font-semibold">WaveMind Solutions</span>, we combine technology, design, and AI to build products that transform businesses.
+</motion.p>
+
         <div className="mt-6 flex gap-4">
           <a href="#services" className="px-6 py-3 bg-white text-indigo-700 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform">Our Services</a>
           <a href="#contact" className="px-6 py-3 border border-white rounded-full font-semibold hover:bg-white/10 transition">Contact Us</a>
@@ -47,6 +65,65 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Mission, Vision & Core Values Section */}
+<section id="mission" className="py-20 bg-gray-50 text-gray-800">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold text-indigo-600 mb-12">
+      Our Mission, Vision & Core Values
+    </h2>
+
+    <div className="grid gap-10 md:grid-cols-3">
+      {/* Mission */}
+      <motion.div
+        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-semibold text-indigo-600 mb-3">Mission</h3>
+        <p className="text-gray-600 leading-relaxed">
+          To deliver smart, scalable and result-oriented technology solutions
+          that empower businesses to innovate, evolve and grow in a connected
+          world.
+        </p>
+      </motion.div>
+
+      {/* Vision */}
+      <motion.div
+        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-semibold text-indigo-600 mb-3">Vision</h3>
+        <p className="text-gray-600 leading-relaxed">
+          To become a globally recognized technology partner
+          known for innovation, customer trust and digital excellence.
+        </p>
+      </motion.div>
+
+      {/* Core Values */}
+      <motion.div
+        className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-2xl font-semibold text-indigo-600 mb-3">Core Values</h3>
+        <ul className="text-gray-600 space-y-2">
+          <li>• Innovation & Creativity</li>
+          <li>• Integrity & Transparency</li>
+          <li>• Customer-First Approach</li>
+          <li>• Continuous Learning</li>
+          <li>• Excellence in Execution</li>
+        </ul>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50 text-gray-800">

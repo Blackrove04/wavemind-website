@@ -7,12 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#4F46E5",   // Indigo Blue (brand color)
-        secondary: "#9333EA", // Purple accent
-        accent: "#3B82F6",    // Light blue
+        sky: {
+          50: "#f0f9ff",
+          300: "#7dd3fc",
+          500: "#0ea5e9",
+          600: "#0284c7",
+        },
+        cyan: {
+          400: "#22d3ee",
+        }
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"], // clean modern font
+        sans: ["Poppins", "sans-serif"],
       },
     },
   },

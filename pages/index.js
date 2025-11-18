@@ -3,149 +3,186 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="font-sans bg-white min-h-screen text-gray-900">
       <Navbar />
 
-      {/* HERO */}
-      <main className="relative flex items-center justify-center text-center min-h-screen pt-16 overflow-hidden bg-gradient-to-tr from-sky-500 to-cyan-400 text-white">
-        {/* subtle overlay shapes (optional) */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
+      {/* HERO SECTION */}
+      <section className="bg-[#0A1A3A] text-white pt-32 pb-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Text Content */}
+          <div className="md:w-1/2">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              Transforming Ideas into{" "}
+              <span className="text-[#00C4FF]">Intelligent Digital</span> Solutions
+            </h1>
+            <p className="mt-4 text-lg text-gray-300">
+              We help startups and SMBs innovate with AI, web, and automation.
+            </p>
 
-        <div className="relative z-10 px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-lg">
-            Innovative Digital Solutions
-          </h1>
-          <p className="mt-6 text-lg md:text-2xl text-white/90">
-            At <span className="font-semibold">WaveMind Solutions</span>, we combine technology, design and AI to build products that transform businesses.
-          </p>
-        </div>
-      </main>
+            {/* Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="mailto:wavemindsolutions@gmail.com"
+                className="bg-linear-to-r from-[#00C4FF] to-[#0078FF] text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:opacity-90 transition"
+              >
+                Get a Free Consultation
+              </a>
+              <a
+                href="services"
+                className="bg-white text-[#0A1A3A] font-semibold px-5 py-3 rounded-lg shadow-md hover:bg-gray-100 transition"
+              >
+                Our Services
+              </a>
+            </div>
+          </div>
 
-      {/* Tagline */}
-      <section className="py-12 bg-white text-center text-gray-800">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-sky-600">WaveMind Solutions</h2>
-          <p className="mt-3 text-lg">Innovate · Elevate · Navigate</p>
+          {/* Illustration / Logo area */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src="/logo.png"
+              alt="WaveMind Brain Illustration"
+              className="w-80 md:w-96 drop-shadow-lg"
+            />
+          </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-20 bg-gray-50 text-gray-800">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      {/* ABOUT SECTION */}
+      <section id="about" className="py-20 bg-white text-gray-800">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h3 className="text-3xl font-bold text-sky-600 mb-4">About Us</h3>
-            <p className="text-lg leading-relaxed mb-4">
-              At <strong>WaveMind Solutions</strong>, we believe technology should not just solve problems — it should create possibilities.
-              We offer cutting-edge web, mobile, software, and AI/ML solutions tailored to modern business needs.
+            <h2 className="text-3xl font-bold mb-4 text-[#0A1A3A]">About Us</h2>
+            <p className="text-lg mb-4">
+              At <strong>WaveMind Solutions</strong>, At WaveMind Solutions, we believe technology is more than just a tool—it is the driving force behind innovation, growth, and sustainable business transformation. We are a forward-thinking technology company specializing in Web Development, Mobile Applications, AI & Data Science, Software Development, Cloud & DevOps, Digital Transformation, Digital Marketing, and Graphic Design.
+
+Our mission is to empower startups, brands, and enterprises with smart, scalable, and high-impact digital solutions that help them innovate, elevate, and navigate the digital future with confidence. With a blend of creativity, technical expertise, and strategic insight, we deliver solutions that solve real business challenges while unlocking new opportunities.
+
+We are committed to building long-term partnerships by ensuring transparency, quality, and excellence in everything we do. Whether you are a growing business or an established enterprise, WaveMind Solutions is your trusted technology partner dedicated to turning ideas into powerful digital realities.
             </p>
-            <p className="text-lg leading-relaxed">
-              Our mission is to innovate continuously, deliver excellence, and help businesses harness technology to transform ideas into impactful digital realities.
+            <p className="text-lg text-gray-600">
+              50+ projects delivered — trusted by startups across India.
             </p>
           </div>
-
+          
           <div className="flex justify-center">
-            <div className="w-80 h-80 bg-white rounded-2xl shadow-inner flex items-center justify-center">
-              <span className="text-gray-400">[Team / Illustration]</span>
-            </div>
+            <img
+              src="/signature.JPG"
+              alt="About Illustration"
+              className="w-72 md:w-80 opacity-80"
+            />
           </div>
         </div>
       </section>
 
-      {/* Mission / Vision / Values */}
-      <section className="py-20 bg-white text-gray-800">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold text-sky-600 mb-8">Our Mission, Vision & Core Values</h3>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-semibold mb-2">Mission</h4>
-              <p className="text-gray-600">To deliver smart, scalable and result-oriented technology solutions that empower businesses to innovate and grow.</p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-semibold mb-2">Vision</h4>
-              <p className="text-gray-600">To be a trusted global technology partner recognized for transforming businesses through smart, scalable digital solutions.</p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="text-xl font-semibold mb-2">Core Values</h4>
-              <ul className="text-gray-600 space-y-1">
-                <li>Innovation</li>
-                <li>Integrity</li>
-                <li>Excellence</li>
-                <li>Collaboration</li>
-                <li>Sustainability</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* MISSION / VISION / CORE VALUES */}
+<section id="mission" className="py-20 bg-[#F8FAFC] text-gray-800">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-3xl font-bold mb-10 text-[#0A1A3A]">
+      Our Mission, Vision & Core Values
+    </h2>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50 text-gray-800">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold text-sky-600 mb-8">Why Choose Us</h3>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">Tailor-Made Solutions</h4>
-              <p className="text-gray-600 mt-2">Built specifically for your goals.</p>
-            </div>
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">Expert Team</h4>
-              <p className="text-gray-600 mt-2">Skilled professionals with real-world experience.</p>
-            </div>
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">End-to-End Services</h4>
-              <p className="text-gray-600 mt-2">From concept to launch and support.</p>
-            </div>
-          </div>
+    <div className="grid gap-8 md:grid-cols-3">
+      {/* Mission */}
+      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div className="flex justify-center mb-4">
+          <img
+            src="/mission.png"
+            alt="Mission Icon"
+            className="h-16 w-16 object-contain"
+          />
         </div>
-      </section>
+        <h3 className="text-xl font-semibold mb-2 text-[#0A1A3A]">
+          Mission
+        </h3>
+        <p className="text-gray-600">
+          To empower businesses with intelligent digital solutions that
+          accelerate growth and transformation.
+        </p>
+      </div>
 
-      {/* Industries */}
-      <section id="industries" className="py-16 bg-white text-gray-800">
+      {/* Vision */}
+      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div className="flex justify-center mb-4">
+          <img
+            src="/vision.png"
+            alt="Vision Icon"
+            className="h-16 w-16 object-contain"
+          />
+        </div>
+        <h3 className="text-xl font-semibold mb-2 text-[#0A1A3A]">
+          Vision
+        </h3>
+        <p className="text-gray-600">
+          To be a leading provider of innovative tech solutions that shape
+          the future of digital businesses.
+        </p>
+      </div>
+
+      {/* Core Values */}
+      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div className="flex justify-center mb-4">
+          <img
+            src="/core-values.png"
+            alt="Core Values Icon"
+            className="h-16 w-16 object-contain"
+          />
+        </div>
+        <h3 className="text-xl font-semibold mb-2 text-[#0A1A3A]">
+          Core Values
+        </h3>
+        <p className="text-gray-600">
+          Integrity. Innovation. Excellence. Collaboration.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* INDUSTRIES WE SERVE */}
+      <section
+        id="industries"
+        className="py-20 bg-[#F8FAFC] text-gray-800"
+      >
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold text-sky-600 mb-6">Industries We Serve</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {["IT & Software","eCommerce","Education","Healthcare","Finance","Travel","Real Estate","Small Business"].map((t) => (
-              <span key={t} className="px-4 py-2 bg-gray-100 rounded-full text-sm">{t}</span>
+          <h2 className="text-3xl font-bold mb-10 text-[#0A1A3A]">
+            Industries We Serve
+          </h2>
+          <p className="text-gray-600 mb-12">
+            Our experience spans across diverse domains — helping businesses of all sizes transform through technology.
+          </p>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "IT & Software", img: "/industries/it-software.jpg" },
+              { name: "eCommerce", img: "/industries/ecommerce.webp" },
+              { name: "Education", img: "/industries/education.jpeg" },
+              { name: "Healthcare", img: "/industries/healthcare.webp" },
+              { name: "Finance", img: "/industries/finance.jpeg" },
+              { name: "Travel", img: "/industries/travel.jpg" },
+              { name: "Real Estate", img: "/industries/real-estate.jpg" },
+              { name: "Small Business", img: "/industries/small-business.jpg" },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="relative group h-60 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition"
+                  style={{ backgroundImage: `url(${item.img})` }}
+                ></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition"></div>
+                <div className="relative z-10 flex items-center justify-center h-full">
+                  <h3 className="text-white text-xl md:text-2xl font-semibold tracking-wide">
+                    {item.name}
+                  </h3>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Contact */}
-      <section id="contact" className="py-20 bg-gray-50 text-gray-800">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h3 className="text-3xl font-bold text-sky-600 mb-6">Get in Touch</h3>
-          <p className="text-gray-700 mb-6">Have a project in mind or want to collaborate? Let’s build something great together.</p>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold mb-1">Email</h4>
-              <p><a href="mailto:wavemindsolutions@gmail.com" className="text-sky-600">wavemindsolutions@gmail.com</a></p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold mb-1">Phone (PINAK MAJUMDER)</h4>
-              <p className="text-gray-600">Sales — +91 8282843434</p>
-              <h4 className="font-semibold mb-1 mt-3">Phone (ABHISHEK DUTTA ROY)</h4>
-              <p className="text-gray-600">Support — +91 8282812121</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h4 className="font-semibold mb-1">Office</h4>
-              <p>
-                <a
-                  href="https://www.google.com/maps/search/13+Kalupara+Lane+Dhakuria+Kolkata+700031"
-                  target="_blank" rel="noreferrer"
-                  className="text-sky-600"
-                >
-                  13, Kalupara Lane, Dhakuria, Kolkata - 700031
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       <Footer />
     </div>
   );

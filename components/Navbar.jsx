@@ -1,45 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
 
+
+  
   return (
-    <header className="bg-white/90 backdrop-blur-sm fixed w-full z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="WaveMind Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-sky-600">WaveMind Solutions</span>
-          </Link>
+    <header className="bg-[#0A1A3A] text-white shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <img src="/logo.jpg" alt="WaveMind Logo" className="h-10 w-auto" />
+          <span className="text-lg font-semibold text-white tracking-wide">
+            WaveMind
+          </span>
+        </Link>
 
-          <nav className="hidden md:flex gap-8 items-center text-sm">
-            <Link href="/" className="text-gray-700 hover:text-sky-600">Home</Link>
-            <a href="#about" className="text-gray-700 hover:text-sky-600">About</a>
-            <Link href="/services" className="text-gray-700 hover:text-sky-600">Services</Link>
-            <a href="#contact" className="text-gray-700 hover:text-sky-600">Contact</a>
-          </nav>
+        {/* Menu */}
+        <nav className="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#about" className="hover:text-[#00C4FF] transition">About</a>
+          <a href="#mission" className="hover:text-[#00C4FF] transition">Mission</a>
+          <a href="#why-us" className="hover:text-[#00C4FF] transition">Why Choose Us</a>
+        </nav>
 
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
-            aria-label="Toggle menu"
-          >
-            ☰
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {open && (
-          <div className="md:hidden py-3 flex flex-col gap-2 pb-4">
-            <Link href="/" className="block px-2 py-2 rounded hover:bg-gray-100">Home</Link>
-            <a href="#about" className="block px-2 py-2 rounded hover:bg-gray-100">About</a>
-            <Link href="/services" className="block px-2 py-2 rounded hover:bg-gray-100">Services</Link>
-            <a href="#contact" className="block px-2 py-2 rounded hover:bg-gray-100">Contact</a>
-          </div>
-        )}
+        {/* CTA Button */}
+        <a
+          href="mailto:wavemindsolutions@gmail.com"
+          className="bg-linear-to-r from-[#00C4FF] to-[#0078FF] hover:opacity-90 text-white font-semibold px-4 py-2 rounded-lg text-sm transition"
+        >
+          Get a Free Consultation
+        </a>
       </div>
     </header>
   );

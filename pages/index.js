@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Testimonials } from "@/components/Testimonials";
+
 
 export default function Home() {
   return (
@@ -183,6 +185,9 @@ We are committed to building long-term partnerships by ensuring transparency, qu
         </div>
       </section>
       
+       {/* TESTIMONIALS SECTION */}
+      <Testimonials />
+
       <Footer />
     </div>
   );
